@@ -27,19 +27,19 @@ public class Ghost : MonoBehaviour
 
         if (dir == 0)
         {
-            rb.velocity = new Vector3(-speed, 0, 0);
+            rb.linearVelocity = new Vector3(-speed, 0, 0);
         }
         if (dir == 1)
         {
-            rb.velocity = new Vector3(speed, 0, 0);
+            rb.linearVelocity = new Vector3(speed, 0, 0);
         }
         if (dir == 2)
         {
-            rb.velocity = new Vector3(0, 0, speed);
+            rb.linearVelocity = new Vector3(0, 0, speed);
         }
         if (dir == 3)
         {
-            rb.velocity = new Vector3(0, 0, -speed);
+            rb.linearVelocity = new Vector3(0, 0, -speed);
         }
         print("dir=" + dir);
 
@@ -58,7 +58,7 @@ public class Ghost : MonoBehaviour
 
 
             yield return new WaitForSeconds(Random.Range(1, 5));
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
         }
 
 

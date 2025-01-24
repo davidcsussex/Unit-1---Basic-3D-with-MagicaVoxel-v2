@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
             isJumping = true;
 
             // give the player a positive velocity in the y axis, and preserve the x velocity
-            rb.velocity = new Vector3(rb.velocity.x, 5.5f, 0);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 5.5f, 0);
         }
     }
 
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     {
         // check for player landing
 
-        if (isJumping && isGrounded && (rb.velocity.y <= 0))
+        if (isJumping && isGrounded && (rb.linearVelocity.y <= 0))
         {
             print("landed!");
             // player was jumping and has now hit the ground
